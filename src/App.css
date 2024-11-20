@@ -1,0 +1,201 @@
+
+/* Body with white background */
+body {
+  background-color: #ffffff; /* White background for the entire page */
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Card container with white background */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px; /* Keep padding for spacing */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: fit-content; /* Automatically adjust width to fit content */
+  height: fit-content; /* Automatically adjust height to fit content */
+  margin: auto;
+  background-color: #ffffff; /* White background for the card */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  color: #000;
+}
+
+
+
+/* Username input styling */
+.username-input {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 300px;
+  color: #000000;
+  font-size: 16px;
+  background-color: #ffffff; /* White background */
+  border: 1px solid #ccc; /* Light black border */
+  border-radius: 10px; /* Rounded corners */
+  outline: none; /* Remove default outline */
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.username-input:focus {
+  border-color: #51c0ec; /* Light blue border on focus */
+}
+
+.username-input::placeholder {
+  color: #999; /* Light black (grayish) color for placeholder */
+  font-size: 14px; /* Adjust font size if needed */
+}
+
+.error-message {
+  color: rgb(56, 59, 81); /* Red text to highlight the error */
+  font-size: 12px; /* Slightly smaller font size */
+  margin-top: 6px;
+  text-align: center; /* Aligns error message centrally */
+}
+.success-message{
+  color: rgb(56, 59, 81); /* Red text to highlight the error */
+  font-size: 12px; /* Slightly smaller font size */
+  margin-top: 6px;
+  text-align: center;
+}
+
+/* Button styling */
+.button {
+  background-color: #191f54;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 40px;
+  margin: 10px 0;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none; /* Remove the outline (focus border) */
+}
+
+/* Optionally, you can define a focus state with a custom style if needed */
+.button:focus {
+  outline: none; /* Ensure no outline on focus */
+}
+
+
+.button:hover {
+  background-color: #1a237e;
+}
+
+/* Captcha display box */
+.captcha-display {
+  background-color: #ffffff;
+  border: 1px solid black;
+  padding: 15px;
+  width: 100%; /* Full width of the parent container */
+  max-width: 200px; /* Limit the max-width to a reasonable size */
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+  margin-top: -20px;
+  border-radius: 5px;
+  color: #000000;
+  display: flex;
+  justify-content: center; /* Center the captcha text horizontally */
+  align-items: center; /* Center the captcha text vertically */
+  height: 50px; /* Add height to make the captcha box more visually balanced */
+}
+
+
+
+/* Instructions styling */
+.instructions {
+  font-size: 12px;
+  color: #999;
+  text-align: left;
+  margin-top: 15px;
+}
+
+/* Flex container to hold both coin and razorpay containers side by side */
+/* Coins and Razorpay container */
+.coins-and-razorpay {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  justify-content: space-between; /* Adds space between the coin and Razorpay containers */
+  gap: 20px; /* Adds space between the coin and Razorpay containers */
+}
+
+/* Common styling for coins and Razorpay containers */
+.coins-container,
+.razorpay-container {
+  background-color: #f0f0f0;
+  
+  width: 100px; /* Equal width */
+  height: 50px; /* Equal height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px; /* Adjust as needed */
+  font-weight: bold;
+  color: rgba(0, 121, 154, 0.803);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure no extra space around the coin text */
+.coins-container p,
+.razorpay-container p {
+  margin: 0;
+  line-height: 1; /* Reduces line height to eliminate extra space */
+}
+
+/* Adjusted coin symbol and amount styling */
+.coin-symbol,
+.coin-amount {
+  font-size: 14px;
+   /* Match font size for uniformity */
+}
+
+/* Razorpay icon styling */
+.razorpay-container i {
+  margin-right: 8px;
+  font-size: 20px;
+  color: rgba(0, 121, 154, 0.803);
+}
+
+/* Razorpay text */
+.razorpay-text {
+  font-size: 14px; /* Match font size to coins text */
+  margin: 0;
+  padding: 0;
+}
+
+
+@media (max-width: 480px) {
+  .card-container {
+    padding: 15px; /* Reduce padding */
+  }
+
+  .username-input {
+    width: 80%; /* Full width for input */
+  }
+
+  .coins-and-razorpay {
+    flex-direction: row; /* Stack containers */
+    gap: 30px;
+     /* Smaller gap */
+  }
+  
+  .coins-container,
+  .razorpay-container {
+    width: 100%; /* Reduce width slightly */
+    height: 35px; 
+    padding: 10px;/* Adjust height */
+  }
+
+  .instructions {
+    font-size: 10px; /* Smaller font for instructions */
+  }
+}
